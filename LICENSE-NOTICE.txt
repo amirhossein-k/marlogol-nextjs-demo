@@ -1,0 +1,6 @@
+Marlogol demo source prepared for the requesting user.
+Generated photographs depict sample arrangements, not actual sale inventory.
+Reference inspiration: https://vohu.co/ (no logo, customer testimonials or source code copied).
+Vazirmatn: SIL Open Font License, loaded from Google Fonts.
+Lucide icons: ISC license. shadcn/ui-derived primitives: MIT license.
+Third-party package licenses remain with their authors; consult installed packages.
