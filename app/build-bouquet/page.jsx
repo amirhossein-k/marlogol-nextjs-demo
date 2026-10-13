@@ -1,5 +1,4 @@
-import App from "../../src/App";
-import { getCatalog } from "../../lib/catalog";
+import DemoPage from "../../lib/demo-page";
 export const dynamic = "force-dynamic";
 export const metadata = {
   title: "ساخت دسته‌گل دلخواه، انتخاب بسته‌های گل",
@@ -7,5 +6,5 @@ export const metadata = {
   alternates: { canonical: "/build-bouquet" }
 };
 export default async function BuilderPage() {
-  return <App catalog={await getCatalog()} initialScreen="builder" routingMode="path" backend={true}/>;
+  return <DemoPage screen="builder"/>;
 }

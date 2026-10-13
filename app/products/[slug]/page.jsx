@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProduct } from "../../../lib/catalog";
+import { siteUrl } from "../../../lib/deployment.mjs";
 import "../../../src/style.css";
 export const dynamic = "force-dynamic";
 export async function generateMetadata({ params }) {
@@ -13,7 +14,7 @@ export default async function ProductPage({ params }) {
   const { slug } = await params;
   const product = await getProduct(slug);
   if (!product) notFound();
-  const data = { "@context": "https://schema.org", "@type": "Product", name: product.name, description: product.description, category: product.category, image: new URL(`/images/${product.photo}.webp`, process.env.SITE_URL || "http://localhost:3000").href };
+  const data = { "@context": "https://schema.org", "@type": "Product", name: product.name, description: product.description, category: product.category, image: new URL(`/images/${product.photo}.webp`, siteUrl(process.env)).href };
   return <main className="marlogol standalone-product">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\\u003c") }}/>
     <Link href="/">مارلوگل · بازگشت به فروشگاه</Link>

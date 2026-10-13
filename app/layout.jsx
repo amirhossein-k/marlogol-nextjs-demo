@@ -1,6 +1,7 @@
 import "./globals.css";
+import { siteUrl } from "../lib/deployment.mjs";
 export const metadata = {
-  metadataBase: new URL(process.env.SITE_URL || "http://localhost:3000"),
+  metadataBase: new URL(siteUrl(process.env)),
   title: { default: "مارلوگل | نسخه نمایشی خرید گل و دسته‌گل در تهران", template: "%s | مارلوگل" },
   description: "فروشگاه نمایشی مارلوگل؛ انتخاب دسته‌گل، باکس و جار گل با تحویل از فردا تا هفت روز آینده، فقط در تهران.",
   robots: { index: false, follow: false },
