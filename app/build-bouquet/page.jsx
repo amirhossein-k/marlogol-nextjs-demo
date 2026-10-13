@@ -1,10 +1,7 @@
 import DemoPage from "../../lib/demo-page";
+import { pageMetadata } from "../../lib/seo.mjs";
 export const dynamic = "force-dynamic";
-export const metadata = {
-  title: "ساخت دسته‌گل دلخواه، انتخاب بسته‌های گل",
-  description: "انتخاب بسته داوودی ۴ تا ۵ شاخه، بسته رز ۱۵ شاخه و تزیین دسته‌گل به سلیقه شما. نسخه نمایشی.",
-  alternates: { canonical: "/build-bouquet" }
-};
+export const metadata = pageMetadata("ساخت دسته‌گل دلخواه، انتخاب رز و داوودی در تهران", "بسته داوودی ۴ تا ۵ شاخه و رز ۱۵ شاخه را ترکیب کنید؛ انتخاب کاغذ، چیدمان و روبان با نمایش قیمت و تعداد شاخه. نسخه نمایشی مارلوگل.", "/build-bouquet");
 export default async function BuilderPage() {
   return <DemoPage screen="builder"/>;
 }
